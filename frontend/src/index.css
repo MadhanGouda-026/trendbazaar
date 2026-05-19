@@ -1,0 +1,91 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:       #0a0a0f;
+  --ink-soft:  #3d3d4d;
+  --ink-mute:  #8888a0;
+  --cream:     #faf9f6;
+  --white:     #ffffff;
+  --border:    #e8e6f0;
+  --accent:    #ff4d00;
+  --accent2:   #7c3aed;
+  --gold:      #f59e0b;
+  --success:   #10b981;
+  --error:     #ef4444;
+  --card:      #ffffff;
+  --shadow:    0 2px 16px rgba(10,10,15,0.08);
+  --shadow-lg: 0 8px 40px rgba(10,10,15,0.14);
+  --r:         12px;
+  --r-sm:      8px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+
+button { cursor: pointer; font-family: 'DM Sans', sans-serif; border: none; outline: none; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; object-fit: cover; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── Buttons ── */
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 11px 22px; border-radius: var(--r-sm); font-size: 14px; font-weight: 600; transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+.btn-primary { background: var(--ink); color: #fff; }
+.btn-primary:hover { background: #2a2a3a; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(10,10,15,0.2); }
+.btn-accent { background: var(--accent); color: #fff; }
+.btn-accent:hover { background: #e04400; transform: translateY(-1px); }
+.btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--ink); }
+.btn-outline:hover { border-color: var(--ink); background: var(--ink); color: #fff; }
+.btn-ghost { background: transparent; color: var(--ink-soft); }
+.btn-ghost:hover { background: var(--border); }
+.btn-sm { padding: 7px 14px; font-size: 13px; }
+.btn-lg { padding: 14px 28px; font-size: 16px; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
+
+/* ── Cards ── */
+.card { background: var(--card); border-radius: var(--r); border: 1px solid var(--border); box-shadow: var(--shadow); }
+
+/* ── Badge ── */
+.badge { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.badge-red { background: #fee2e2; color: #b91c1c; }
+.badge-green { background: #d1fae5; color: #065f46; }
+.badge-purple { background: #ede9fe; color: #5b21b6; }
+.badge-orange { background: #ffedd5; color: #9a3412; }
+
+/* ── Input ── */
+.input { padding: 10px 14px; border-radius: var(--r-sm); border: 1.5px solid var(--border); font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--ink); background: #fff; transition: border 0.2s, box-shadow 0.2s; outline: none; width: 100%; }
+.input:focus { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(10,10,15,0.08); }
+
+/* ── Spinner ── */
+.spinner { width: 20px; height: 20px; border: 2px solid var(--border); border-top-color: var(--ink); border-radius: 50%; animation: spin 0.6s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Toast ── */
+.toast { position: fixed; bottom: 24px; right: 24px; background: var(--ink); color: #fff; padding: 12px 20px; border-radius: var(--r-sm); font-size: 14px; font-weight: 500; z-index: 9999; animation: slideUp 0.3s ease; box-shadow: var(--shadow-lg); }
+.toast.success { background: var(--success); }
+.toast.error { background: var(--error); }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── Stars ── */
+.stars { display: flex; gap: 2px; }
+.star { color: var(--gold); font-size: 14px; }
+.star.empty { color: var(--border); }
+
+/* ── Loading page ── */
+.page-loading { display: flex; align-items: center; justify-content: center; min-height: 40vh; }
+
+/* ── Empty state ── */
+.empty-state { text-align: center; padding: 60px 20px; }
+.empty-state .empty-icon { font-size: 56px; margin-bottom: 16px; }
+.empty-state h3 { font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+.empty-state p { color: var(--ink-mute); font-size: 14px; }

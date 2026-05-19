@@ -1,0 +1,16 @@
+.orders-page { max-width: 900px; margin: 0 auto; padding: 32px 24px; animation: fadeUp 0.3s ease; }
+.orders-page h1 { font-size: 28px; margin-bottom: 24px; }
+.orders-list { display: flex; flex-direction: column; gap: 16px; }
+.order-card { padding: 20px; }
+.order-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.order-id { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 15px; }
+.order-date { font-size: 13px; color: var(--ink-mute); margin-top: 2px; }
+.order-items { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+.order-item-row { display: flex; align-items: center; gap: 12px; }
+.order-item-row img { width: 56px; height: 56px; object-fit: cover; border-radius: var(--r-sm); }
+.oi-name { font-size: 14px; font-weight: 500; }
+.oi-meta { font-size: 12px; color: var(--ink-mute); margin-top: 2px; }
+.oi-total { margin-left: auto; font-weight: 700; font-size: 15px; }
+.order-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid var(--border); }
+.order-total { font-size: 16px; font-weight: 700; }
+.order-pay { font-size: 12px; color: var(--ink-mute); text-transform: uppercase; }

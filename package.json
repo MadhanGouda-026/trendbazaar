@@ -1,0 +1,9 @@
+{
+  "name": "trendbazaar",
+  "version": "1.0.0",
+  "scripts": {
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev": "cd backend && start cmd /k npm run dev && cd ../frontend && npm start",
+    "seed": "cd backend && node seed.js"
+  }
+}

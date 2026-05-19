@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "3gbdvxevrmpck7r1c",
+    "name": "Admin User",
+    "email": "admin@trendbazaar.com",
+    "password": "$2a$10$jwtfdRGtHE6OT5ZWqEuSkO2QI1ZN2MMSCfbF0b6cs2IVJ3ytm4xQ.",
+    "role": "admin",
+    "wishlist": [],
+    "createdAt": "2026-05-19T11:38:36.728Z"
+  },
+  {
+    "_id": "84bsmiwgjmpck7r5m",
+    "name": "Test User",
+    "email": "user@trendbazaar.com",
+    "password": "$2a$10$j04U4cWXPrJ6wEDVKCrG.OUcoAt.qHeeSi62EXYLc/UmgTf2eM1ra",
+    "role": "user",
+    "wishlist": [],
+    "createdAt": "2026-05-19T11:38:36.865Z"
+  },
+  {
+    "_id": "9c6djt0xempckfeck",
+    "name": "Madhan",
+    "email": "goudamadhan226@gmail.com",
+    "password": "$2a$10$Gqbk7W.AOJ2rXRDCzilCxeyBBL9/W9AHye.XrEfk1krOz7AcnJBPS",
+    "role": "user",
+    "wishlist": [],
+    "createdAt": "2026-05-19T11:44:33.542Z"
+  }
+]
