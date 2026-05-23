@@ -13,7 +13,7 @@ export default function Home({ setPage }) {
   const [banner, setBanner] = useState(0);
 
   useEffect(() => {
-    fetch("/api/products/featured")
+    fetch((process.env.REACT_APP_API_URL||"")+"/api/products/featured")
       .then(r => r.json())
       .then(setFeatured)
       .catch(() => {});

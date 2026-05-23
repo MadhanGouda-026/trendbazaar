@@ -11,7 +11,7 @@ export function Login({ setPage }) {
     if (!form.email || !form.password) return showToast("Fill all fields", "error");
     setLoading(true);
     try {
-      const res = await fetch("/api/auth/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
+      const res = await fetch((process.env.REACT_APP_API_URL||"")+"/api/auth/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
       const data = await res.json();
       if (!res.ok) return showToast(data.message, "error");
       login(data);
@@ -55,7 +55,7 @@ export function Register({ setPage }) {
     if (form.password.length < 6) return showToast("Password min 6 chars", "error");
     setLoading(true);
     try {
-      const res = await fetch("/api/auth/register", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
+      const res = await fetch((process.env.REACT_APP_API_URL||"")+"/api/auth/register", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
       const data = await res.json();
       if (!res.ok) return showToast(data.message, "error");
       login(data);

@@ -10,7 +10,7 @@ export default function Orders({ setPage }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/orders/my", { headers })
+    fetch((process.env.REACT_APP_API_URL||"")+"/api/orders/my", { headers })
       .then(r => r.json())
       .then(d => { setOrders(Array.isArray(d) ? d : []); setLoading(false); })
       .catch(() => setLoading(false));

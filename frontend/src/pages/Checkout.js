@@ -16,7 +16,7 @@ export default function Checkout({ setPage }) {
       return showToast("Fill all address fields", "error");
     setLoading(true);
     try {
-      const res = await fetch("/api/orders", {
+      const res = await fetch((process.env.REACT_APP_API_URL||"")+"/api/orders", {
         method: "POST", headers,
         body: JSON.stringify({
           items: cart.map(i => ({ product: i._id, name: i.name, image: i.images?.[0], price: i.price, quantity: i.qty })),
