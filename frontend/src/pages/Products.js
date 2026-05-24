@@ -29,7 +29,7 @@ export default function Products({ setPage, initCategory, initSearch }) {
     if (search) params.set("search", search);
     if (sort) params.set("sort", sort);
 
-    fetch(`/api/products?${params}`)
+    fetch(`${process.env.REACT_APP_API_URL||""}/api/products?${params}`)
       .then(r => r.json())
       .then(d => { setProducts(d.products || []); setTotalPages(d.pages || 1); setTotal(d.total || 0); setLoading(false); })
       .catch(() => setLoading(false));
